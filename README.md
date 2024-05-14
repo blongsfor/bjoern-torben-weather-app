@@ -1,1 +1,0 @@
-# bjoern-torben-weather-app
