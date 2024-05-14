@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <Form onAddActivity={} />
+      <Form />
     </>
   );
 }
