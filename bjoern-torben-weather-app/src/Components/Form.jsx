@@ -1,3 +1,5 @@
+import { Checkbox } from "./Checkbox";
+
 export default function Form({ onAddActivity }) {
   function handleSubmit(event) {
     event.preventDefault();
@@ -16,8 +18,7 @@ export default function Form({ onAddActivity }) {
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input name="name"></input>
-        <label htmlFor="isForGoodWeather">Good-weather activity:</label>
-        <input type="checkbox" name="isForGoodWeather" />
+        <Checkbox />
         <button>Submit</button>
       </form>
     </>
