@@ -1,21 +1,24 @@
 import { useState } from "react";
 import "./App.css";
 import Form from "./Components/Form";
+import { uid } from "uid";
 
 const initialActivities = [
-  { name: "Berghain", checked: true },
-  { name: "About Blank", checked: true },
-  { name: "drin bleiben", checked: true },
+  { name: "Berghain", checked: false },
+  { name: "Sisyphos", checked: true },
+  { name: "drin bleiben", checked: false },
 ];
 
 function App() {
-  const [activities, setActivities] = useState("");
+  const [activities, setActivities] = useState(initialActivities);
 
-  function handleAddActivity({ name, checked }) {}
+  function handleAddActivity({ newActivity }) {
+    setActivities([...activities, { id: uid(), ...newActivity }]);
+  }
 
   return (
     <>
-      <Form />
+      <Form onAddActivity={handleAddActivity} />
     </>
   );
 }
