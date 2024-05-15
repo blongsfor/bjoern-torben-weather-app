@@ -5,6 +5,7 @@ import { List } from "./Components/List";
 import { uid } from "uid";
 import useLocalStorageState from "use-local-storage-state";
 import { useEffect } from "react";
+import "./Components/Checkbox.css";
 
 const InitialActivities = [
   { id: 1, name: "Berghain", isForGoodWeather: true },

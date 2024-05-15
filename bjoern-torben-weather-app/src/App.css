@@ -60,7 +60,7 @@ li {
 }
 
 .delete-button {
-  background-color: rgb(221, 224, 140);
+  background-color: #dde08c;
   border-radius: 10px;
 }
 
@@ -199,3 +199,44 @@ input[type="checkbox"] {
     padding: 15px;
   }
 }
+
+/* -----------------Checkbox CSS ----------------------
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #f9f9f9;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: 1000;
+  color: #dde08c;
+}
+
+input[type="checkbox"]:focus {
+  outline-offset: 3px;
+}
+
+input[type="checkbox"]:disabled {
+  color: var(--form-control-disabled);
+  cursor: not-allowed;
+}
+
+.form-control--disabled {
+  color: var(--form-control-disabled);
+}
+
+input[type="button"]:active {
+  outline: none;
+}
+*/
