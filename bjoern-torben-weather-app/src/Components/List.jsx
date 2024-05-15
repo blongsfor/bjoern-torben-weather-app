@@ -1,7 +1,7 @@
 export function List({ name, id, handleDeleteActivity }) {
   return (
     <>
-      <ul>
+      <div>
         <li key={id} name={name}>
           {name}
           <button
@@ -12,7 +12,7 @@ export function List({ name, id, handleDeleteActivity }) {
             x
           </button>
         </li>
-      </ul>
+      </div>
     </>
   );
 }
