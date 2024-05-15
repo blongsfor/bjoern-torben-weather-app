@@ -62,10 +62,10 @@ function App() {
   return (
     <>
       <div>
-        <h2>
+        <h1>
           {condition}
           {temperature} °C
-        </h2>
+        </h1>
         <div>
           {filteredActivities.map((activity) => (
             <li key={activity.id}>
