@@ -20,6 +20,7 @@
   padding: 5px;
   border-radius: 15px;
   background-color: #f9f9f9;
+  width: auto;
 }
 
 .submit-button {
@@ -38,8 +39,20 @@
   background-color: #f9f9f9;
 }
 
+.activity-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.activity-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .activity-input label {
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 li {
@@ -79,6 +92,12 @@ input {
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+
+input[type="checkbox"] {
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
 }
 
 @media (min-width: 600px) {
