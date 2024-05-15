@@ -63,9 +63,9 @@ function App() {
   return (
     <>
       <div>
-        <h1>
-          {condition}
-          {temperature} °C
+        <h1 className="heading">
+          <span>{condition}</span>
+          <span>{temperature} °C</span>
         </h1>
         <div>
           {filteredActivities.map((activity) => (

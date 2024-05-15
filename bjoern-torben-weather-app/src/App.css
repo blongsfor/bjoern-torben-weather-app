@@ -24,6 +24,7 @@
   border-radius: 15px;
   background-color: #f9f9f9;
   width: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .submit-button {
@@ -76,6 +77,7 @@ li {
   border: 1px solid #ccc;
   border-radius: 15px;
   background-color: #f9f9f9;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .list-activities {
@@ -203,43 +205,11 @@ input[type="checkbox"] {
   }
 }
 
-/* -----------------Checkbox CSS ----------------------
-
-input[type="checkbox"] {
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  background-color: #f9f9f9;
-  border-radius: 3px;
-  cursor: pointer;
-  position: relative;
+h1 {
+  display: flex;
+  justify-content: center;
 }
 
-input[type="checkbox"]:checked::before {
-  content: "✓";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 18px;
-  font-weight: 1000;
-  color: #dde08c;
+.heading span {
+  margin: 0 20px;
 }
-
-input[type="checkbox"]:focus {
-  outline-offset: 3px;
-}
-
-input[type="checkbox"]:disabled {
-  color: var(--form-control-disabled);
-  cursor: not-allowed;
-}
-
-.form-control--disabled {
-  color: var(--form-control-disabled);
-}
-
-input[type="button"]:active {
-  outline: none;
-}
-*/
