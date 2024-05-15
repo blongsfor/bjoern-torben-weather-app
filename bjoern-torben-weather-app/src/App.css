@@ -4,9 +4,9 @@
 }
 
 #root {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -16,33 +16,30 @@
   display: flex;
   flex-direction: column;
   border: 1px solid #ccc;
-  margin: 20px;
-  padding: 10px;
-  border-radius: 25px;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 15px;
   background-color: #f9f9f9;
 }
 
 .submit-button {
   background-color: aqua;
-  margin: 20px;
-  padding: 10px;
+  margin: 10px;
+  padding: 5px;
   border: 1px solid #ccc;
-  border-radius: 25px;
+  border-radius: 15px;
   background-color: #f9f9f9;
 }
 
-.activity-checkbox {
-  margin: 20px;
-  padding: 10px;
-
-  background-color: #f9f9f9;
-}
-
+.activity-checkbox,
 .activity-input {
-  margin: 20px;
-  padding: 10px;
-
+  margin: 10px;
+  padding: 5px;
   background-color: #f9f9f9;
+}
+
+.activity-input label {
+  margin-right: 5px;
 }
 
 li {
@@ -51,17 +48,17 @@ li {
 
 .delete-button {
   background-color: rgb(221, 224, 140);
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .list-activities li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
-  padding: 10px;
+  margin-bottom: 5px;
+  padding: 5px;
   border: 1px solid #ccc;
-  border-radius: 25px;
+  border-radius: 15px;
   background-color: #f9f9f9;
 }
 
@@ -73,4 +70,113 @@ li {
 
 label {
   background-color: #f9f9f9;
+}
+
+input {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+@media (min-width: 600px) {
+  #root {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .form,
+  .submit-button,
+  .activity-checkbox,
+  .activity-input {
+    margin: 15px;
+    padding: 7px;
+    border-radius: 20px;
+  }
+
+  .list-activities li {
+    padding: 7px;
+    margin-bottom: 7px;
+  }
+
+  input {
+    padding: 7px;
+  }
+}
+
+@media (min-width: 900px) {
+  #root {
+    max-width: 90%;
+    padding: 2rem;
+  }
+
+  .form,
+  .submit-button,
+  .activity-checkbox,
+  .activity-input {
+    margin: 20px;
+    padding: 10px;
+    border-radius: 25px;
+  }
+
+  .list-activities li {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  input {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #root {
+    max-width: 80%;
+    padding: 2.5rem;
+  }
+
+  .form,
+  .submit-button,
+  .activity-checkbox,
+  .activity-input {
+    margin: 25px;
+    padding: 12px;
+    border-radius: 30px;
+  }
+
+  .list-activities li {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+
+  input {
+    padding: 12px;
+  }
+}
+
+@media (min-width: 1536px) {
+  #root {
+    max-width: 70%;
+    padding: 3rem;
+  }
+
+  .form,
+  .submit-button,
+  .activity-checkbox,
+  .activity-input {
+    margin: 30px;
+    padding: 15px;
+    border-radius: 35px;
+  }
+
+  .list-activities li {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  input {
+    padding: 15px;
+  }
 }
