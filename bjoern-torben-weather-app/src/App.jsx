@@ -18,6 +18,9 @@ function App() {
   });
 
   const [isGoodWeather, setIsGoodWeather] = useState(true);
+  const [condition, setCondition] = useState("");
+  const [temperature, setTemperature] = useState(0);
+  const [location, setLocation] = useState("");
 
   // const isGoodWeather = true;
 
@@ -42,6 +45,9 @@ function App() {
         let fetchedData = await response.json();
         console.log("weather", fetchedData);
         setIsGoodWeather(fetchedData.isGoodWeather);
+        setCondition(fetchedData.condition);
+        setTemperature(fetchedData.temperature);
+        setLocation(fetchedData.location);
       } catch (err) {
         console.log(
           "Failed to fetch weather data, defaulting weather to bad weather: ",
@@ -56,7 +62,10 @@ function App() {
   return (
     <>
       <div>
-        <h1>{setIsGoodWeather ? "Good Weather" : "Bad Weather"}</h1>
+        <h2>
+          {condition}
+          {temperature} °C
+        </h2>
         <ul>
           {filteredActivities.map((activity) => (
             <li key={activity.id}>
