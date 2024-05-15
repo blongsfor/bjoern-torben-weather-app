@@ -7,9 +7,9 @@ import useLocalStorageState from "use-local-storage-state";
 import { useEffect } from "react";
 
 const InitialActivities = [
-  { name: "Berghain", isForGoodWeather: true },
-  { name: "Sisyphos", isForGoodWeather: true },
-  { name: "drin bleiben", isForGoodWeather: false },
+  { name: "Berghain", id: 1, isForGoodWeather: true },
+  { name: "Sisyphos", id: 2, isForGoodWeather: true },
+  { name: "drin bleiben", id: 3, isForGoodWeather: false },
 ];
 
 function App() {
@@ -17,37 +17,46 @@ function App() {
     defaultValue: InitialActivities,
   });
 
-  const [isGoodWeather, setIsGoodWeather] = useState({
-    isGoodWeather: true,
-  });
+  const [isGoodWeather, setIsGoodWeather] = useState(true);
 
-  useEffect(
-    () =>
-      async function getIsGoodWeather() {
-        const response = await fetch(
-          "https://example-apis.vercel.app/api/weather"
-        );
-        const data = await response.json();
-        console.log("fetch: ", data);
-        setIsGoodWeather({ isGoodWeather: data.isGoodWeather });
-        getIsGoodWeather();
-      },
-    []
+  // const isGoodWeather = true;
+
+  const filteredActivities = activities.filter(
+    (activity) => activity.isForGoodWeather === isGoodWeather
   );
 
   function handleAddActivity(newActivity) {
     setActivities([...activities, { id: uid(), ...newActivity }]);
   }
 
-  const filteredActivities = activities.filter(
-    (activity) => activity.isForGoodWeather === isGoodWeather
-  );
+  function handleDeleteActivity(idActivity) {
+    setActivities(activities.filter((activity) => activity.id != idActivity));
+  }
+
+  useEffect(() => {
+    async function getIsGoodWeather() {
+      try {
+        const response = await fetch(
+          "https://example-apis.vercel.app/api/weather"
+        );
+        let fetchedData = await response.json();
+        console.log("weather", fetchedData);
+        setIsGoodWeather(fetchedData.isGoodWeather);
+      } catch (err) {
+        console.log(
+          "Failed to fetch weather data, defaulting weather to bad weather: ",
+          err
+        );
+      }
+    }
+    getIsGoodWeather();
+  }, []);
 
   console.log("activities", activities);
   return (
     <>
       <div>
-        <h1>{setIsGoodWeather ? "Good Weather" : "Bad Weather"}</h1>
+        <h1>{/*{setIsGoodWeather ? "Good Weather" : "Bad Weather"}*/}</h1>
         <ul>
           {filteredActivities.map((activity) => (
             <li key={activity.id}>
@@ -55,6 +64,7 @@ function App() {
                 name={activity.name}
                 isForGoodWeather={activity.isForGoodWeather}
                 id={activity.id}
+                handleDeleteActivity={handleDeleteActivity}
               />
             </li>
           ))}
