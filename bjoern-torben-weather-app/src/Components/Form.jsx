@@ -20,7 +20,7 @@ export default function Form({ onAddActivity }) {
           <label htmlFor="name">Name:</label>
           <input name="name" required></input>
         </div>
-        <div className="acitivity-checkbox">
+        <div className="activity-checkbox">
           <label htmlFor="isForGoodWeather">Is For Good Weather</label>
           <input
             type="checkbox"

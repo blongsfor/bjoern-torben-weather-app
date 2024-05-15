@@ -15,24 +15,34 @@
 .form {
   display: flex;
   flex-direction: column;
-  border: solid red;
+  border: 1px solid #ccc;
   margin: 20px;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: #f9f9f9;
 }
 
 .submit-button {
   background-color: aqua;
   margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  background-color: #f9f9f9;
 }
 
-.acitivity-checkbox {
-  border: solid yellow;
+.activity-checkbox {
   margin: 20px;
+  padding: 10px;
+
+  background-color: #f9f9f9;
 }
 
 .activity-input {
   margin: 20px;
-  border: solid orange;
-  align-content: space-between;
+  padding: 10px;
+
+  background-color: #f9f9f9;
 }
 
 li {
@@ -59,4 +69,8 @@ li {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+label {
+  background-color: #f9f9f9;
 }
