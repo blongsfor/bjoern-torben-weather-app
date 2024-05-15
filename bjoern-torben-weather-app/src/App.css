@@ -1,42 +1,62 @@
+* {
+  color: black;
+  background-color: wheat;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.form {
+  display: flex;
+  flex-direction: column;
+  border: solid red;
+  margin: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.submit-button {
+  background-color: aqua;
+  margin: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.acitivity-checkbox {
+  border: solid yellow;
+  margin: 20px;
 }
 
-.card {
-  padding: 2em;
+.activity-input {
+  margin: 20px;
+  border: solid orange;
+  align-content: space-between;
 }
 
-.read-the-docs {
-  color: #888;
+li {
+  list-style-type: none;
+}
+
+.delete-button {
+  background-color: rgb(221, 224, 140);
+  border-radius: 20px;
+}
+
+.list-activities li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  background-color: #f9f9f9;
+}
+
+.list-activities {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }

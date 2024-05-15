@@ -66,7 +66,7 @@ function App() {
           {condition}
           {temperature} °C
         </h2>
-        <ul>
+        <div>
           {filteredActivities.map((activity) => (
             <li key={activity.id}>
               <List
@@ -77,7 +77,7 @@ function App() {
               />
             </li>
           ))}
-        </ul>
+        </div>
       </div>
       <Form onAddActivity={handleAddActivity} />
     </>
