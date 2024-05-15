@@ -7,9 +7,9 @@ import useLocalStorageState from "use-local-storage-state";
 import { useEffect } from "react";
 
 const InitialActivities = [
-  { name: "Berghain", id: 1, isForGoodWeather: true },
-  { name: "Sisyphos", id: 2, isForGoodWeather: true },
-  { name: "drin bleiben", id: 3, isForGoodWeather: false },
+  { id: 1, name: "Berghain", isForGoodWeather: true },
+  { id: 2, name: "Sisyphos", isForGoodWeather: true },
+  { id: 3, name: "drin bleiben", isForGoodWeather: false },
 ];
 
 function App() {
@@ -56,7 +56,7 @@ function App() {
   return (
     <>
       <div>
-        <h1>{/*{setIsGoodWeather ? "Good Weather" : "Bad Weather"}*/}</h1>
+        <h1>{setIsGoodWeather ? "Good Weather" : "Bad Weather"}</h1>
         <ul>
           {filteredActivities.map((activity) => (
             <li key={activity.id}>
