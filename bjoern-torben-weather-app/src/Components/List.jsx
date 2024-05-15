@@ -2,7 +2,9 @@ export function List({ name, id }) {
   return (
     <>
       <ul>
-        <initialActivities key={id} name={name}></initialActivities>
+        <li key={id} name={name}>
+          {name}
+        </li>
       </ul>
     </>
   );
