@@ -1,42 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  color: black;
+  background-color: wheat;
+  font-family: "Poppins", sans-serif;
+}
+
 #root {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+  width: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.submit-button {
+  background-color: aqua;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+}
+
+.activity-checkbox,
+.activity-input {
+  margin: 10px;
+  padding: 5px;
+  background-color: #f9f9f9;
+}
+
+.activity-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.activity-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.activity-input label {
+  margin-right: 10px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.delete-button {
+  background-color: #dde08c;
+  border-radius: 10px;
+}
+
+.list-activities li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.list-activities {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+label {
+  background-color: #f9f9f9;
+}
+
+input {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="checkbox"] {
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+@media (min-width: 600px) {
+  #root {
+    max-width: 100%;
+    padding: 1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .form,
+  .submit-button,
+  .activity-checkbox,
+  .activity-input {
+    margin: 15px;
+    padding: 7px;
+    border-radius: 20px;
+  }
+
+  .list-activities li {
+    padding: 7px;
+    margin-bottom: 7px;
+  }
+
+  input {
+    padding: 7px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (min-width: 900px) {
+  #root {
+    max-width: 90%;
+    padding: 2rem;
+  }
+
+  .form,
+  .submit-button,
+  .activity-checkbox,
+  .activity-input {
+    margin: 20px;
+    padding: 10px;
+    border-radius: 25px;
+  }
+
+  .list-activities li {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  input {
+    padding: 10px;
   }
 }
 
-.card {
-  padding: 2em;
+@media (min-width: 1200px) {
+  #root {
+    max-width: 80%;
+    padding: 2.5rem;
+  }
+
+  .form,
+  .submit-button,
+  .activity-checkbox,
+  .activity-input {
+    margin: 25px;
+    padding: 12px;
+    border-radius: 30px;
+  }
+
+  .list-activities li {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+
+  input {
+    padding: 12px;
+  }
 }
 
-.read-the-docs {
-  color: #888;
+@media (min-width: 1536px) {
+  #root {
+    max-width: 70%;
+    padding: 3rem;
+  }
+
+  .form,
+  .submit-button,
+  .activity-checkbox,
+  .activity-input {
+    margin: 30px;
+    padding: 15px;
+    border-radius: 35px;
+  }
+
+  .list-activities li {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  input {
+    padding: 15px;
+  }
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.heading span {
+  margin: 0 20px;
 }
