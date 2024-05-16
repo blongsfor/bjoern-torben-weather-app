@@ -57,6 +57,8 @@ function App() {
       }
     }
     getIsGoodWeather();
+    const interval = setInterval(getIsGoodWeather, 5000);
+    return () => clearInterval(interval);
   }, []);
 
   console.log("activities", activities);
