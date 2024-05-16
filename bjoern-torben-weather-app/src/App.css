@@ -213,3 +213,77 @@ h1 {
 .heading span {
   margin: 0 20px;
 }
+
+.city-form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+  width: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.city-form label {
+  margin-bottom: 10px;
+}
+
+.city-form select {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+@media (min-width: 600px) {
+  .city-form {
+    margin: 15px;
+    padding: 7px;
+    border-radius: 20px;
+  }
+
+  .city-form select {
+    padding: 7px;
+  }
+}
+
+@media (min-width: 900px) {
+  .city-form {
+    margin: 20px;
+    padding: 10px;
+    border-radius: 25px;
+  }
+
+  .city-form select {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .city-form {
+    margin: 25px;
+    padding: 12px;
+    border-radius: 30px;
+  }
+
+  .city-form select {
+    padding: 12px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .city-form {
+    margin: 30px;
+    padding: 15px;
+    border-radius: 35px;
+  }
+
+  .city-form select {
+    padding: 15px;
+  }
+}
