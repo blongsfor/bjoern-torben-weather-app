@@ -8,21 +8,19 @@ export default function City({ onSelectCity }) {
     onSelectCity(selectedCity);
   }
   return (
-    <>
-      <form name="city-form">
-        <label htmlFor="location-names">Choose a location:</label>
-        <select
-          name="location-names"
-          id="location-names"
-          value={selectCityValue}
-          onChange={handleChangeCity}
-        >
-          <option value="europe">Europe</option>
-          <option value="arctic">Arctic</option>
-          <option value="Sahara">Sahara</option>
-          <option value="rainforest">Rainforest</option>
-        </select>
-      </form>
-    </>
+    <form name="city-form" className="city-form">
+      <label htmlFor="location-names">Choose a location:</label>
+      <select
+        name="location-names"
+        id="location-names"
+        value={selectCityValue}
+        onChange={handleChangeCity}
+      >
+        <option value="europe">Europe</option>
+        <option value="arctic">Arctic</option>
+        <option value="Sahara">Sahara</option>
+        <option value="rainforest">Rainforest</option>
+      </select>
+    </form>
   );
 }
